@@ -110,7 +110,7 @@ ConversationDemo.prototype.updateAnswer = function(answer) {
   var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
 
   answer_element_text.textContent = answer.text;
-  object_link.textContent = answer.street_object.type + ' #' + answer.street_object.code
+  object_link.textContent = answer.street_object.name.en + ' #' + answer.street_object.code
   object_link.setAttribute('href', '/objects/' + answer.street_object.type + '/' + answer.street_object.code)
 
 }
