@@ -1145,10 +1145,10 @@ a {
         top: 220px; } }
 
 .hero.video {
-  height: 70vh;
+  height: 75vh;
   max-height: 650px; }
   .hero.video .col-6-fake {
-    top: 60%; }
+    top: 55%; }
   .hero.video .image-bottom {
     top: 0;
     -webkit-transform: rotate(180deg);
@@ -1157,6 +1157,11 @@ a {
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
     bottom: auto; }
+  @media (max-width: 960px) {
+    .hero.video {
+      height: 70vh; }
+      .hero.video .col-6-fake {
+        top: 45%; } }
 
 .process {
   background: #DA0979;
