@@ -1,0 +1,32 @@
+<script src="/assets/classList.js"></script>
+<script src="/assets/conversation_demo.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var conversation_demo = new ConversationDemo('<%= I18n.locale %>');
+  })
+</script>
+
+<div class="home-content">
+  <h1><%= I18n.t(:intro_header) %></h1>
+
+  <div class="conversation-demo">
+    <div class="bubble question" id="question-bubble">
+      <div class="bubble-inner">
+        <div class="bubble-heading"><%= I18n.t(:question) %></div>
+        <div class="text"><%= I18n.t(:question_example) %></div>
+      </div>
+    </div>
+
+    <div class="bubble answer" id="answer-bubble">
+      <div class="bubble-inner">
+        <div class="bubble-heading"><%= I18n.t(:answer) %></div>
+        <div class="text"><%= I18n.t(:answer_example) %></div>
+      </div>
+      <div class="object-ref"><%= I18n.t(:via) %> <span class="object"><%= I18n.t(:answer_example_object_type) %> #90210</span></div>
+    </div>
+
+    <button class="new-question hidden" id="new-question-button"></button>
+    <button class="next-answer hidden" id="next-answer-button"></button>
+  </div>
+
+</div>
