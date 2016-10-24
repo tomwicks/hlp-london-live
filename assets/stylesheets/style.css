@@ -1120,6 +1120,11 @@ a {
   @media (max-width: 960px) {
     .hero.message {
       max-height: 850px; }
+      .hero.message img.bg-image {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        width: 400%; }
       .hero.message .buttons {
         width: 100%;
         top: 380px; }
@@ -1147,6 +1152,8 @@ a {
 .hero.video {
   height: 75vh;
   max-height: 650px; }
+  .hero.video img.bg-image {
+    width: 200%; }
   .hero.video .col-6-fake {
     top: 55%; }
   .hero.video .image-bottom {
@@ -1161,7 +1168,7 @@ a {
     .hero.video {
       height: 50vh; }
       .hero.video .col-6-fake {
-        top: 45%; } }
+        top: 55%; } }
 
 .process {
   background: #DA0979;

@@ -172,10 +172,6 @@
 		}
 	}
 
-	@include mq("extra-large", "max-width") {
-
-	}
-
 	@include mq("medium", "max-width") {
 		.col-4 {
 			width: 350px;
@@ -256,12 +252,9 @@
 		}
 	}
 
-	.conversation-demo {
-		
-	}
 
 	.bubble {
-	margin-top: 100px;
+		margin-top: 100px;
 	  @include calc(width, "50% - 15px");
 	  box-sizing: border-box;
 	  position: absolute;
@@ -466,6 +459,13 @@
 	@include mq("small", "max-width") {
 		max-height: 850px;
 
+		img.bg-image {
+			position: absolute;
+			top: 0;
+			z-index: 0;
+			width: 400%;
+		}
+
 		.buttons {
 			width: 100%;
 			top: 380px;
@@ -515,6 +515,10 @@
 	height: 75vh;
 	max-height: 650px;
 
+	img.bg-image {
+		width: 200%;
+	}
+
 	.col-6-fake {
 		top: 55%;
 	}
@@ -529,7 +533,7 @@
 		height: 50vh;
 
 		.col-6-fake {
-			top: 45%;
+			top: 55%;
 		}
 	}
 }
