@@ -1131,7 +1131,8 @@ a {
           font-size: 1.2em;
           line-height: 1.4; }
       .hero.message .bubble {
-        width: 100%; }
+        width: 100%;
+        font-size: 0.8em; }
       .hero.message .bubble-inner {
         font-size: 16px; }
       .hero.message .bubble-inner h4 {
