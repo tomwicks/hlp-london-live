@@ -345,11 +345,13 @@
 
 	.bubble.answer.off {
 	  @include transform(translateX(150%));
+	  right: 0;
 	  @include transition(all, 0.5s, ease-in-out);
 	}
 
 	.bubble.question.off {
 	  @include transform(translateX(-150%));
+	  left: 0;
 	  @include transition(all, 0.5s, ease-in-out);
 	}
 
