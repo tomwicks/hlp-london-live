@@ -1,10 +1,9 @@
 
-var ConversationDemo = function(locale) {
+var ConversationDemo = function() {
 
   if ('classList' in document.createElement('div')) {
 
-    this.locale = locale
-
+    this.api_url = ''
     this.question_element = document.getElementById('question-bubble')
     this.answer_element = document.getElementById('answer-bubble')
     this.new_question_button = document.getElementById('new-question-button')
@@ -35,7 +34,7 @@ ConversationDemo.prototype.requestNewRandomQuestion = function() {
   this.new_question_button.setAttribute('disabled', 'disabled')
   this.next_answer_button.setAttribute('disabled', 'disabled')
 
-  this.request.open('get', 'questions/random?time' + Date.now())
+  this.request.open('get', this.api_url + '/questions/random?time' + Date.now())
   this.request.send()
 
 }
@@ -53,7 +52,7 @@ ConversationDemo.prototype.displayNewQuestion = function() {
   var question_element = this.question_element;
   var question_text = this.question_element.getElementsByClassName('text')[0]
 
-  question_text.textContent = this.random_question.question.text[this.locale]
+  question_text.textContent = this.random_question.question.text.en
 
   this.new_question_button.removeAttribute('disabled')
   this.displayNextAnswer()
@@ -107,18 +106,11 @@ ConversationDemo.prototype.displayNextAnswer = function() {
 
 ConversationDemo.prototype.updateAnswer = function(answer) {
 
-  var object_link = this.answer_element.getElementsByClassName('object')[0]
+  var object_link = this.answer_element.getElementsByClassName('object-link')[0]
   var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
 
-  var street_object_type = '';
-
-  if (answer.street_object.name) {
-    street_object_type = answer.street_object.name[this.locale]
-  }
-
-  street_object_type = street_object_type || answer.street_object.type || ''
-
   answer_element_text.textContent = answer.text;
-  object_link.textContent = street_object_type + ' #' + answer.street_object.code
+  object_link.textContent = answer.street_object.type + ' #' + answer.street_object.code
+  object_link.setAttribute('href', '/objects/' + answer.street_object.type + '/' + answer.street_object.code)
 
 }
