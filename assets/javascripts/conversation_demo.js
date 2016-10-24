@@ -80,7 +80,6 @@ ConversationDemo.prototype.displayNextAnswer = function() {
   var next_answer_button = this.next_answer_button
   var answer_element = this.answer_element;
   var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
-  var object_link = this.answer_element.getElementsByClassName('object-link')[0]
 
   var new_answer = this.random_question.responses[this.current_answer_position]
 
@@ -106,11 +105,8 @@ ConversationDemo.prototype.displayNextAnswer = function() {
 
 ConversationDemo.prototype.updateAnswer = function(answer) {
 
-  var object_link = this.answer_element.getElementsByClassName('object-link')[0]
   var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
 
   answer_element_text.textContent = answer.text;
-  object_link.textContent = answer.street_object.name.en + ' #' + answer.street_object.code
-  object_link.setAttribute('href', '/objects/' + answer.street_object.type + '/' + answer.street_object.code)
 
 }
