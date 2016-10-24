@@ -512,7 +512,18 @@
 }
 
 .hero.video {
-	height: 90vh;
+	height: 70vh;
+	max-height: 650px;
+
+	.col-6-fake {
+		top: 60%;
+	}
+
+	.image-bottom {
+		top: 0;
+		@include transform(rotate(180deg));
+		bottom: auto;
+	}
 }
 
 .process {
