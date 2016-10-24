@@ -526,7 +526,7 @@
 	}
 
 	@include mq("small", "max-width") {
-		height: 70vh;
+		height: 50vh;
 
 		.col-6-fake {
 			top: 45%;

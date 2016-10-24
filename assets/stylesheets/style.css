@@ -1159,7 +1159,7 @@ a {
     bottom: auto; }
   @media (max-width: 960px) {
     .hero.video {
-      height: 70vh; }
+      height: 50vh; }
       .hero.video .col-6-fake {
         top: 45%; } }
 
