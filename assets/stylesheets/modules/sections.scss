@@ -270,11 +270,13 @@
 
 	.bubble.question {
 	  left: 0;
+	  @include transform(translateX(0%));
 	  @include transition(all, 0.5s, ease-in-out);
 	}
 
 	.bubble.answer {
 	  right: 0;
+	  @include transform(translateX(0%));
 	  @include transition(all, 0.5s, ease-in-out);
 	}
 
@@ -460,6 +462,7 @@
 	}
 
 	@include mq("small", "max-width") {
+		max-height: 850px;
 
 		.buttons {
 			width: 100%;

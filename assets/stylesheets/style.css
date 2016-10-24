@@ -927,6 +927,11 @@ a {
     z-index: 10; }
   .hero.message .bubble.question {
     left: 0;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -934,6 +939,11 @@ a {
     transition: all 0.5s ease-in-out; }
   .hero.message .bubble.answer {
     right: 0;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -1106,29 +1116,31 @@ a {
     color: #fff;
     border-bottom: 0; }
   @media (max-width: 960px) {
-    .hero.message .buttons {
-      width: 100%;
-      top: 400px; }
-    .hero.message .buttons button:after {
-      display: none; }
-    .hero.message .text-row {
-      margin-top: 40px; }
-    .hero.message .text-row .col-6 {
-      width: 100%; }
-      .hero.message .text-row .col-6 h1 {
-        font-size: 1.2em;
-        line-height: 1.4; }
-    .hero.message .bubble {
-      width: 100%;
-      font-size: 0.8em; }
-    .hero.message .bubble-inner {
-      font-size: 18px; }
-    .hero.message .bubble-inner h4 {
-      font-size: 18px; }
-    .hero.message .bubble-inner .text {
-      font-size: 18px; }
-    .hero.message .bubble.answer {
-      top: 220px; } }
+    .hero.message {
+      max-height: 850px; }
+      .hero.message .buttons {
+        width: 100%;
+        top: 400px; }
+      .hero.message .buttons button:after {
+        display: none; }
+      .hero.message .text-row {
+        margin-top: 40px; }
+      .hero.message .text-row .col-6 {
+        width: 100%; }
+        .hero.message .text-row .col-6 h1 {
+          font-size: 1.2em;
+          line-height: 1.4; }
+      .hero.message .bubble {
+        width: 100%;
+        font-size: 0.8em; }
+      .hero.message .bubble-inner {
+        font-size: 18px; }
+      .hero.message .bubble-inner h4 {
+        font-size: 18px; }
+      .hero.message .bubble-inner .text {
+        font-size: 18px; }
+      .hero.message .bubble.answer {
+        top: 220px; } }
 
 .hero.video {
   height: 90vh; }
