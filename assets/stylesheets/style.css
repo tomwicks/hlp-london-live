@@ -1120,7 +1120,7 @@ a {
       max-height: 850px; }
       .hero.message .buttons {
         width: 100%;
-        top: 400px; }
+        top: 380px; }
       .hero.message .buttons button:after {
         display: none; }
       .hero.message .text-row {
@@ -1131,14 +1131,13 @@ a {
           font-size: 1.2em;
           line-height: 1.4; }
       .hero.message .bubble {
-        width: 100%;
-        font-size: 0.8em; }
+        width: 100%; }
       .hero.message .bubble-inner {
-        font-size: 18px; }
+        font-size: 16px; }
       .hero.message .bubble-inner h4 {
-        font-size: 18px; }
+        font-size: 16px; }
       .hero.message .bubble-inner .text {
-        font-size: 18px; }
+        font-size: 16px; }
       .hero.message .bubble.answer {
         top: 220px; } }
 
