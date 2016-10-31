@@ -81,7 +81,6 @@ ConversationDemo.prototype.displayNextAnswer = function() {
   var answer_element = this.answer_element;
   var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
   var object_link = this.answer_element.getElementsByClassName('object-ref')[0]
-
   var new_answer = this.random_question.responses[this.current_answer_position]
 
   next_answer_button.removeAttribute('disabled')
@@ -108,6 +107,10 @@ ConversationDemo.prototype.updateAnswer = function(answer) {
   var answer_element_text = this.answer_element.getElementsByClassName('text')[0]
   
   answer_element_text.textContent = answer.text;
-  object_link.textContent = answer.street_object.name.en + ' #' + answer.street_object.code
+  if (answer.street_object.name) { 
+    object_link.textContent = answer.street_object.name.en + ' #' + answer.street_object.code 
+  } else { 
+    object_link.textcontent = answer.street_object.type + ' #' + answer.street_object.code; 
+  }
 
 }
